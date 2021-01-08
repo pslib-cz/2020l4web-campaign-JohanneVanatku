@@ -1,0 +1,23 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+section{
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+.secAbout{
+    background-color: #8CF16F;
+}
+.secShop{
+    background-color: #FFEE7D;
+}
+.secCont{
+    background-color: #FFBC36;
+}
