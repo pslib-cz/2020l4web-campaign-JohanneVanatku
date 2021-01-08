@@ -61,4 +61,38 @@ h2,  .Slogo p{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 }
+.secAbout > div{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    padding: 2em;
+}
+.secAbout > div .aboutText{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+.secAbout > div .sum1{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    width: 100%;
+    height: auto;
+}
+.secAbout > div > div:last-of-type{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.secAbout > div > div:last-of-type img{
+    width: 12%;
+    height: auto;
+}
 }
