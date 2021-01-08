@@ -1,0 +1,15 @@
+@font-face{
+    font-family: barlowReg;
+    src: url(./fonts/Barlow-Regular.ttf);
+    font-weight: 400;
+}
+@font-face{
+    font-family: barlowConMed;
+    src: url(./fonts/BarlowSemiCondensed-Medium.ttf);
+    font-weight: 500;
+}
+@font-face{
+    font-family: barlowConBold;
+    src: url(./fonts/BarlowSemiCondensed-SemiBold.ttf);
+    font-weight: 600;
+}
