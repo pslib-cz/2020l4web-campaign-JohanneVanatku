@@ -50,5 +50,15 @@ h2,  .Slogo p{
 @media only screen and (min-width: 760px){
 .Slogo{
     width: 500px;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+.secFirst > div{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 }
