@@ -17,6 +17,7 @@ html{
 }
 h2,  .Slogo p{
     font-family: barlowConMed;
+    font-weight: 500;
 }
 .secFirst{
     background-color: #78cf60;
@@ -46,6 +47,10 @@ h2,  .Slogo p{
 .Slogo p{
     font-size: 2em;
     text-align: center;
+}
+.secShop h2{
+    text-align: center;
+    margin: 1.5rem;
 }
 @media only screen and (min-width: 760px){
 .Slogo{
@@ -94,5 +99,34 @@ h2,  .Slogo p{
 .secAbout > div > div:last-of-type img{
     width: 12%;
     height: auto;
+}
+.secShop div{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+    grid-template-rows: 2fr 1fr 2fr;  
+}
+.secShop img{
+    width: 25vw;
+    height: auto;
+}
+.ShA{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    justify-self: center;
+}
+.ShK{
+    grid-column-start: 4;
+    grid-row-start: 1;
+    justify-self: center;
+}
+.ShP{
+    grid-column-start: 2;
+    grid-row-start: 3;
+    justify-self: center;
+}
+.ShT{
+    grid-column-start: 4;
+    grid-row-start: 3;
+    justify-self: center;
 }
 }
