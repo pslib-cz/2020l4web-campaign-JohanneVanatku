@@ -19,28 +19,30 @@ h2,  .Slogo p{
     font-family: barlowConMed;
     font-weight: 500;
 }
+h2{
+    font-size: 2rem;
+}
 .secFirst{
-    background-image: url(./images/photoSquare.png);
-    background-size: 50%;
+    background-size: 40rem;
     background-repeat: no-repeat;
     background-position: left bottom;
 }
 .secFirst > div{
-    background-image: url(./images/BGG.png);
+    background-image: url(./images/BGGv.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 .secAbout{
     background-color: #8CF16F;
-    background-image: url(./images/BGY.png);
+    background-image: url(./images/BGYv.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 .secShop{
     background-color: #FFEE7D;
-    background-image: url(./images/BGO.png);
+    background-image: url(./images/BGOv.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -54,6 +56,10 @@ h2,  .Slogo p{
 .Slogo{
     display: flex;
     flex-direction: column;
+    min-width: 150px;
+    max-width: 500px;
+    grid-column-start: 3;
+    grid-row-start: 2;
 }
 .Slogo img{
     width: 100%;
@@ -73,11 +79,14 @@ h2,  .Slogo p{
     margin: 1.5rem;
 }
 .secCont > div > div{
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-size: 1.5em;
+    align-items: center;
 }
 .secCont > div{
-    background-image: url(./images/whiteBG.png);
+    background-image: url(./images/BGWv.svg);
     background-size: contain;
     background-repeat: no-repeat;
     width: 40%;
@@ -86,6 +95,18 @@ h2,  .Slogo p{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.secCont img{
+    height: 1.2em;
+    width: 1.2em;
+    display: inline;
+    margin: .1em;
+}
+.secCont p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .2rem;
 }
 header{
     height: 3rem;
@@ -98,19 +119,19 @@ header{
     justify-content: space-between;
     align-items: center;
 }
-header ul{
+header .navReg{
     list-style-type: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-header ul li{
+header .navReg li{
     border-left: solid 1px black;
     padding-right: .5rem;
     padding-left: .5rem;
 }
-header ul li:first-of-type{
+header .navReg li:first-of-type{
     border: none;
 }
 header h2{
@@ -139,12 +160,6 @@ footer{
     font-size: 1.1rem;
     padding: .5rem;
 }
-@media only screen and (min-width: 760px){
-.Slogo{
-    width: 500px;
-    grid-column-start: 3;
-    grid-row-start: 2;
-}
 .secFirst > div{
     width: 100%;
     height: 100%;
@@ -152,18 +167,12 @@ footer{
     grid-template-columns: 2fr 1fr 2fr;
     grid-template-rows: 1fr 1fr 1fr;
 }
-.secAbout > div{
-    margin: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr;
-    padding: 2em;
-}
 .secAbout > div .aboutText{
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 1;
+    font-size: 1.2em;
 }
 .secAbout > div .sum1{
     grid-column-start: 3;
@@ -179,17 +188,14 @@ footer{
     grid-row-start: 2;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    
+    justify-content: center;   
+    align-self: baseline;
 }
 .secAbout > div > div:last-of-type img{
     width: 12%;
     height: auto;
-}
-.secShop div{
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
-    grid-template-rows: 2fr 1fr 2fr;  
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 .secShop img{
     width: 25vw;
@@ -215,4 +221,220 @@ footer{
     grid-row-start: 3;
     justify-self: center;
 }
+@media only screen and (min-width: 550px){
+    .secFirst{
+        background-image: url(./images/photoSquare.png);
+    }
+    .navMob{
+        display:none;
+    }
+    .menu{
+        display: none;
+    }
+}
+@media only screen and (min-width: 760px){
+    .secAbout > div{
+        margin: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1.5fr;
+        grid-template-rows: 2fr 1fr;
+        padding-top: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        height: 100%;
+    }
+    .secShop div{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+        grid-template-rows: 2fr 1fr 2fr;  
+    }
+}
+@media only screen and (max-width: 760px) and (min-width: 550px){
+    .secAbout > div{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+    .secShop div{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
+@media only screen and (max-width: 760px){
+    .secAbout > div{
+        margin: 10px;
+        display: grid;
+        padding-top: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        height: 100%;
+    }
+    .secFirst{
+        background-size: 35rem;
+        background-position: 0 10vh;
+    }
+    .secFirst > div{
+        background-image: url(./images/BGG2v.svg);
+    }
+    .secFirst > div{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .Slogo{
+        grid-column-start: 1;
+        grid-row-start: 3;
+        width: 50vw;
+        margin-left: 25vw;
+    }
+    .secFirst > div{
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+    .secAbout > div .aboutText{
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .secAbout > div .sum1{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        width: 65%;
+        margin-left: 35%;
+    }
+    .secAbout > div > div:last-of-type{
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .secAbout > div > div:last-of-type img{
+        width: 20%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .secShop div{
+        height: 50vh;
+        margin-top: 25vh; 
+    }
+    .secShop img{
+        width: 30vw;
+        height: auto;
+    }
+    .secCont > div{
+        width: 50%;
+    }
+    .secCont > div > div{
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (max-width: 550px){
+    .secFirst{
+        background-color: #8CF16F;
+    }
+    .Slogo{
+        grid-column-start: 1;
+        grid-row-start: 2;
+        width: 80vw;
+        margin-left: 10vw;
+    }
+    .secAbout div{
+        margin: 5px;
+        padding-top: 1rem;
+    }
+    .secAbout h2{
+        margin: .5rem;
+        text-align: center;
+    }
+    .secAbout p{
+        font-size: .8em;
+        text-align: center;
+    }
+    .secAbout > div{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 2fr;
+    }
+    .secAbout > div > div:last-of-type{
+        display: flex;
+        flex-wrap: wrap;
+        width: 85vw;
+        align-self: center;
+        justify-self: center;
+    }
+    .secAbout > div > div:last-of-type img{
+        width: 28vw;
+        margin: .2rem;
+    }
+    .secAbout > div > .sum1{
+        margin-left: auto;
+        width: 70%;
+        margin-right: 15%;
+    }
+    .secShop div{
+        display: grid;
+        grid-template-columns: .5fr 3fr 1fr 3fr .5fr;
+        grid-template-rows: 1fr .5fr 1fr;
+        height: 34vh;
+    }
+    .secShop img{
+        width: 35vw;
+    }
+    .secCont > div{
+        width: 75%;
+    }
+    .secCont > div > div{
+        font-size: 1rem;
+    }
+    footer{
+        font-size: .8rem;
+    }
+    header .navReg{
+        display: none;
+    }
+    .menu{
+        width: 1.5rem;
+        height: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: .5rem;
+    }
+    .menuLine{
+        width: 1.5rem;
+        height: 4px;
+        content: "";
+        background-color: black;
+    }
+    .navMob{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        height: 0;
+        overflow: hidden;
+        transition: linear .1s;
+        overflow: hidden;
+        background-color: #FFEE7D;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        list-style-type: none;
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 0;
+        align-items: center;
+        margin: 0;
+    }
+    .navMob:target{
+        height: 30vh;
+    }
+    .navLine{
+        content: "";
+        height: 2px;
+        width: 70%;
+        background-color: black;
+    }
+    .navMob li:first-of-type span{
+        font-size: 2rem;
+    }
 }

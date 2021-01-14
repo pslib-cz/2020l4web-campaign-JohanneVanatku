@@ -8,16 +8,30 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
+    <header id="head">
         <div><h2>ŠUMINÁDA</h2></div>
-        <ul>
-            <li><a href="">O produktu</a></li>
-            <li><a href="">Kde lze produkt koupit</a></li>
-            <li><a href="">Kontakty</a></li>
+        <ul class="navReg">
+            <li><a href="#secAbout">O produktu</a></li>
+            <li><a href="#secShop">Kde lze produkt koupit</a></li>
+            <li><a href="#secCont">Kontakty</a></li>
         </ul>
+        <a href="#navMob" class="menu">
+            <div class="menuLine"></div>
+            <div class="menuLine"></div>
+            <div class="menuLine"></div>
+        </a>
+            <ul class="navMob" id="navMob">
+                <li><a href="#head"><span>x</span></a></li>
+                <li class="navLine"></li>
+                <li><a href="#secAbout">O produktu</a></li>
+                <li class="navLine"></li>
+                <li><a href="#secShop">Kde lze produkt koupit</a></li>
+                <li class="navLine"></li>
+                <li><a href="#secCont">Kontakty</a></li>
+            </ul>
     </header>
     <main>
-        <section class="secFirst">
+        <section class="secFirst" id="secFirst">
             <div>
             <div class="Slogo">
                 <img src="./images/LOGO.png" alt="">
@@ -26,7 +40,7 @@
             </div>
             </div>
         </section>
-        <section class="secAbout">
+        <section class="secAbout" id="secAbout">
             <div> 
                 <div class="aboutText">
                 <h2>O produktu</h2>
@@ -43,7 +57,7 @@
                 </div>
             </div>
         </section>
-        <section class="secShop">
+        <section class="secShop" id="secShop">
             <h2>Kde náš produkt můžete najít</h2>
             <div>
                 <img src="./images/albert.png" alt="" class="ShA">
@@ -52,12 +66,12 @@
                 <img src="./images/tesco.png" alt="" class="ShT">
             </div>
         </section>
-        <section class="secCont">
+        <section class="secCont" id="secCont">
             <div>
                 <div>
-                <p>Šumináda</p>
-                <p>@suminada</p>
-                <p>suminada@gmail.com</p>
+                <p><img src="./images/facebook.svg" alt=""> Šumináda</p>
+                <p><img src="./images/instagram.svg" alt=""> @suminada</p>
+                <p><img src="./images/email.svg" alt=""> suminada@gmail.com</p>
                 </div>
             </div>
         </section>
